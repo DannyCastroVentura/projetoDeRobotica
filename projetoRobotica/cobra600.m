@@ -79,9 +79,9 @@ T = c600.fkine(qs)
 
 
 %a função ikine
-c600.ikine(T, 'mask', [1 1 1 0 0 1])
+c600.ikine(T, 'mask', [1 1 1 1 0 0])
 
 %a função tic e toc serve para saber o intervalo de tempo que dura para que
 %o matlab faça um determinado calculo.
-tic; c600.ikine(T, 'mask', [1 1 1 0 0 1]); toc
+tic; c600.ikine(T, 'mask', [1 1 1 1 0 0]); toc
 

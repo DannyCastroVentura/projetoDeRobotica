@@ -196,7 +196,7 @@
                 <img class="bd-placeholder-img card-img-top" src="./img/cobra600/gifs/qzToQr.gif">
 
                 <div class="card-body">
-                  <p class="card-text">Animação do qz para o qr.</p>
+                  <p class="card-text">Animação do qz para o qr, ou seja, animação das juntas da posição [0 0 0 0] para [pi/2 -pi/2 0 0]).</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary"><i onclick="changeLike(this);"
@@ -214,7 +214,7 @@
                 <img class="bd-placeholder-img card-img-top" src="./img/cobra600/gifs/qzToQs.gif">
 
                 <div class="card-body">
-                  <p class="card-text">Animação do qz para o qs.</p>
+                  <p class="card-text">Animação do qz para o qs, ou seja, animação das juntas da posição ([0 0 0 0] para [0 -pi/2 0 0]).</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary"><i onclick="changeLike(this);"
@@ -233,7 +233,7 @@
                 <img class="bd-placeholder-img card-img-top" src="./img/cobra600/gifs/qzToQn.gif">
 
                 <div class="card-body">
-                  <p class="card-text">Animação do qz para o qn.</p>
+                  <p class="card-text">Animação do qz para o qn, ou seja, animação das juntas da posição ([pi/2 -pi/2 0 0] para [0 0 0.2 0]).</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary"><i onclick="changeLike(this);"
@@ -251,7 +251,7 @@
                 <img class="bd-placeholder-img card-img-top" src="./img/cobra600/gifs/qrToQn.gif">
 
                 <div class="card-body">
-                  <p class="card-text">Animação do qr para o qn.</p>
+                  <p class="card-text">Animação do qr para o qn, ou seja, animação das juntas da posição ([0 0 0 0] para [0 0 0.2 0]).</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary"><i onclick="changeLike(this);"
@@ -276,7 +276,7 @@
                 <img class="bd-placeholder-img card-img-top" src="./img/cobra600/gifs/GUI.gif">
 
                 <div class="card-body">
-                  <p class="card-text">Usando uma função para mostrar um GUI, sendo que com este podemos alterar o robô
+                  <p class="card-text">Usando a função <em>teach</em> para mostrar um GUI, sendo que com este podemos alterar as posições das juntas do robô
                     da forma que quisermos, começando na posição qz.</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
@@ -314,7 +314,11 @@
                     </lu><br>
                     Neste caso como as juntas 1, 2 e 4 são de rotação, no <b>theta</b> aparecem os q1, q2 e q4
                     referindo-se a cada uma delas.
-                    E como a junta 3 é de translação, aparece no <b>d</b>.
+                    E como a junta 3 é de translação, aparece no <b>d</b>.<br><br>
+
+                    No <b>a</b> existem valores na junta 1 e 2, que é o raio ao redor do z anterior. A junta 3 não possui valor pois é de translação vertical e a junta 4 tem 0 de distância relativamente à junta anterior.<br><br>
+
+                    Relativamente ao <b>alpha</b> podemos confirmar que apenas a junta 2 tem ângulo em torno da normal comum, do z anterior ao novo z.
                   </p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
@@ -334,8 +338,8 @@
                 <img class="bd-placeholder-img card-img-top" src="./img/cobra600/fotos/fkine_qs.PNG">
 
                 <div class="card-body">
-                  <p class="card-text">Usando a função <em>fkine</em> da pose <b>qs</b> para ir buscar a transformação
-                    homogênea que representa a pose.
+                  <p class="card-text">Usando a função <em>fkine</em> da pose <b>qs</b> para ir buscar a transformação homogênea que representa a pose.
+                    É a pose do efetor final do robô como uma transformação homogênea SE (3) (4x4) para a configuração conjunta q (1xN).
                   </p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
@@ -352,9 +356,8 @@
                 <img class="bd-placeholder-img card-img-top" src="./img/cobra600/fotos/ikine_T.PNG">
 
                 <div class="card-body">
-                  <p class="card-text">A função <em>ikine</em> dá-nos os valores que equivalem à posição das juntas do
-                    robô. Atenção que estes podem ou não ser iguais
-                    aos que foram definidos quando o robô foi criado.<br>
+                  <p class="card-text">A função <em>ikine</em> são as coordenadas conjuntas (1 x N) correspondentes à pose do efetor final do robô T (4x4), que é uma transformação homogênea.<br>
+                    Atenção que estes podem ou não ser iguais aos que foram definidos quando o robô foi criado.<br>
                     Neste caso usamos o <b>T</b> definido em cima como parâmetro desta função.
                   </p>
                   <div class="d-flex justify-content-between align-items-center">
@@ -423,11 +426,11 @@
 
 
                   <span class = "codigoComentado">%a função ikine</span><br>
-                  c600.ikine(T, 'mask', [1 1 1 0 0 1])<br><br>
+                  c600.ikine(T, 'mask', [1 1 1 1 0 0])<br><br>
 
                   <span class = "codigoComentado">%a função tic e toc serve para saber o intervalo de tempo que dura para que<br>
                   %o matlab faça um determinado calculo.</span><br>
-                  tic; c600.ikine(T, 'mask', [1 1 1 0 0 1]); toc<br><br>
+                  tic; c600.ikine(T, 'mask', [1 1 1 1 0 0]); toc<br><br>
 
 
                   <br>
@@ -653,7 +656,12 @@
                     </lu><br>
                     Neste caso como todas as juntas são de rotação, no <b>theta</b> aparecem os q1, q2, q3 e q4
                     referindo-se a cada uma delas.
-                    Como não existem juntas de translação, o <b>d</b> aparece vazio.
+                    Como não existem juntas de translação, o <b>d</b> aparece vazio.<br><br>
+
+                    No <b>a</b> existem valores na junta 2, 3 e 4 que são, consequentemente, o raio ao redor do z anterior. Os valores estão negativos pois em vez de se afastarem, aproximam-se.
+                    Na junta 1 não tem comprimento da normal comum.<br><br>
+
+                    Relativamente ao <b>alpha</b> podemos confirmar que apenas as juntas 1 e 2 têm ângulo em torno da normal comum, do z anterior ao novo z.
                   </p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
@@ -673,8 +681,8 @@
                 <img class="bd-placeholder-img card-img-top" src="./img/phantomX/fotos/fkine_qs.PNG">
 
                 <div class="card-body">
-                  <p class="card-text">Usando a função <em>fkine</em> da pose <b>qs</b> para ir buscar a transformação
-                    homogênea que representa a pose.
+                  <p class="card-text">Usando a função <em>fkine</em> da pose <b>qs</b> para ir buscar a transformação homogênea que representa a pose. 
+                    É a pose do efetor final do robô como uma transformação homogênea SE (3) (4x4) para a configuração conjunta q (1xN).
                   </p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
@@ -691,9 +699,8 @@
                 <img class="bd-placeholder-img card-img-top" src="./img/phantomX/fotos/ikine_T.PNG">
 
                 <div class="card-body">
-                  <p class="card-text">A função <em>ikine</em> dá-nos os valores que equivalem à posição das juntas do
-                    robô. Atenção que estes podem ou não ser iguais
-                    aos que foram definidos quando o robô foi criado.<br>
+                  <p class="card-text">A função <em>ikine</em> são as coordenadas conjuntas (1 x N) correspondentes à pose do efetor final do robô T (4x4), que é uma transformação homogênea.<br>
+                    Atenção que estes podem ou não ser iguais aos que foram definidos quando o robô foi criado.<br>
                     Neste caso usamos o <b>T</b> definido em cima como parâmetro desta função.
                   </p>
                   <div class="d-flex justify-content-between align-items-center">
@@ -763,11 +770,11 @@
 
 
                   <span class = "codigoComentado">%a função ikine</span><br>
-                  px.ikine(T, 'mask', [1 1 1 0 0 1])<br><br>
+                  px.ikine(T, 'mask', [1 1 1 1 0 0])<br><br>
 
                   <span class = "codigoComentado">%a função tic e toc serve para saber o intervalo de tempo que dura para que<br>
                   %o matlab faça um determinado calculo.</span><br>
-                  tic; px.ikine(T, 'mask', [1 1 1 0 0 1]); toc<br><br>
+                  tic; px.ikine(T, 'mask', [1 1 1 1 0 0]); toc<br><br>
 
 
                   <br>

@@ -62,7 +62,7 @@ qn = [pi pi/2 0 pi/4];
 px.tool = trotz(-pi/2) * trotx(pi/2);
 
 %mostrar qz
-%px.plot(qz)
+px.plot(qz)
 
 %Criar animações
 qzr = jtraj(qz,qr,50);
@@ -71,7 +71,7 @@ qzn = jtraj(qz,qn,50);
 qsr = jtraj(qs,qr,50);
 
 %Mostrar animação do qz para o qr
-%px.plot(qzr)
+px.plot(qzr)
 
 %Criar GUI para mexer no robô a partir da pose qz
 px.teach(qz);
@@ -87,8 +87,8 @@ T = px.fkine(qs)
 %a função ikine dá-nos os valores que equivalem à posição das juntas do
 %robô, podendo ou não ser iguais aos valores definidos quando o robô é
 %criado.
-px.ikine(T, 'mask', [1 1 1 0 0 1])
+px.ikine(T, 'mask', [1 1 1 1 0 0])
 
 %a função tic e toc serve para saber o intervalo de tempo que dura para que
 %o matlab faça um determinado calculo.
-tic; px.ikine(T, 'mask', [1 1 1 0 0 1]); toc
+tic; px.ikine(T, 'mask', [1 1 1 1 0 0]); toc
