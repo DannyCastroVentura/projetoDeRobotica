@@ -18,6 +18,19 @@
   <link href="./bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
+    .tipo {
+      position: absolute;
+      right: 0.7em;
+      top: 0.7em;
+      padding: 0.4em;
+      color: #212529;
+      border: 2px solid #212529;
+      background-color:  #f8f9fa;
+      border-radius: 3px;
+      font-family: 'Serif', 'Times New Roman'; 
+    }
+
+
     .bd-placeholder-img {
       font-size: 1.125rem;
       text-anchor: middle;
@@ -112,6 +125,7 @@
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <div class="col">
               <div class="card shadow-sm">
+                <span class="tipo">IMG</span>
                 <img class="bd-placeholder-img card-img-top" src="./img/cobra600/fotos/qz.png">
 
                 <div class="card-body">
@@ -130,7 +144,7 @@
             </div>
             <div class="col">
               <div class="card shadow-sm">
-
+                <span class="tipo">IMG</span>
                 <img class="bd-placeholder-img card-img-top" src="./img/cobra600/fotos/qr.png">
 
                 <div class="card-body">
@@ -149,7 +163,7 @@
             </div>
             <div class="col">
               <div class="card shadow-sm">
-
+                <span class="tipo">IMG</span>
                 <img class="bd-placeholder-img card-img-top" src="./img/cobra600/fotos/qs.png">
 
                 <div class="card-body">
@@ -169,8 +183,8 @@
 
             <div class="col">
               <div class="card shadow-sm">
+                <span class="tipo">IMG</span>
                 <img class="bd-placeholder-img card-img-top" src="./img/cobra600/fotos/qn.png">
-
                 <div class="card-body">
                   <p class="card-text">Posição qn = [0 0 0.2 0];</p>
                   <div class="d-flex justify-content-between align-items-center">
@@ -194,10 +208,11 @@
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <div class="col">
               <div class="card shadow-sm">
+                <span class="tipo">GIF</span>
                 <img class="bd-placeholder-img card-img-top" src="./img/cobra600/gifs/qzToQr.gif">
-
                 <div class="card-body">
-                  <p class="card-text">Animação do qz para o qr, ou seja, animação das juntas da posição [0 0 0 0] para [pi/2 -pi/2 0 0].</p>
+                  <p class="card-text">Animação do qz para o qr, ou seja, animação das juntas da posição [0 0 0 0] para
+                    [pi/2 -pi/2 0 0].</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary"><i onclick="changeLike(this);"
@@ -212,10 +227,11 @@
             </div>
             <div class="col">
               <div class="card shadow-sm">
+                <span class="tipo">GIF</span>
                 <img class="bd-placeholder-img card-img-top" src="./img/cobra600/gifs/qzToQs.gif">
-
                 <div class="card-body">
-                  <p class="card-text">Animação do qz para o qs, ou seja, animação das juntas da posição ([0 0 0 0] para [0 -pi/2 0 0].</p>
+                  <p class="card-text">Animação do qz para o qs, ou seja, animação das juntas da posição ([0 0 0 0] para
+                    [0 -pi/2 0 0].</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary"><i onclick="changeLike(this);"
@@ -231,10 +247,11 @@
 
             <div class="col">
               <div class="card shadow-sm">
+                <span class="tipo">GIF</span>
                 <img class="bd-placeholder-img card-img-top" src="./img/cobra600/gifs/qzToQn.gif">
-
                 <div class="card-body">
-                  <p class="card-text">Animação do qz para o qn, ou seja, animação das juntas da posição ([pi/2 -pi/2 0 0] para [0 0 0.2 0].</p>
+                  <p class="card-text">Animação do qz para o qn, ou seja, animação das juntas da posição ([pi/2 -pi/2 0
+                    0] para [0 0 0.2 0].</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary"><i onclick="changeLike(this);"
@@ -249,10 +266,11 @@
             </div>
             <div class="col">
               <div class="card shadow-sm">
+                <span class="tipo">GIF</span>
                 <img class="bd-placeholder-img card-img-top" src="./img/cobra600/gifs/qrToQn.gif">
-
                 <div class="card-body">
-                  <p class="card-text">Animação do qr para o qn, ou seja, animação das juntas da posição ([0 0 0 0] para [0 0 0.2 0].</p>
+                  <p class="card-text">Animação do qr para o qn, ou seja, animação das juntas da posição ([0 0 0 0] para
+                    [0 0 0.2 0].</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary"><i onclick="changeLike(this);"
@@ -274,10 +292,12 @@
           <div class="row row-cols-12">
             <div class="col">
               <div class="card shadow-sm">
+                <span class="tipo">GIF</span>
                 <img class="bd-placeholder-img card-img-top" src="./img/cobra600/gifs/GUI.gif">
 
                 <div class="card-body">
-                  <p class="card-text">Usando a função <em>teach</em> para mostrar um GUI, sendo que com este podemos alterar as posições das juntas do robô
+                  <p class="card-text">Usando a função <em>teach</em> para mostrar um GUI, sendo que com este podemos
+                    alterar as posições das juntas do robô
                     da forma que quisermos, começando na posição qz.</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
@@ -300,6 +320,7 @@
           <div class="row row-cols-1 row-cols-sm-2 g-2">
             <div class="col">
               <div class="card shadow-sm">
+                <span class="tipo">IMG</span>
                 <img class="bd-placeholder-img card-img-top" src="./img/cobra600/fotos/ph.png">
 
                 <div class="card-body">
@@ -317,9 +338,12 @@
                     referindo-se a cada uma delas.
                     E como a junta 3 é de translação, aparece no <b>d</b>.<br><br>
 
-                    No <b>a</b> existem valores na junta 1 e 2, que é o raio ao redor do z anterior. A junta 3 não possui valor pois é de translação vertical e a junta 4 tem 0 de distância relativamente à junta anterior.<br><br>
+                    No <b>a</b> existem valores na junta 1 e 2, que é o raio ao redor do z anterior. A junta 3 não
+                    possui valor pois é de translação vertical e a junta 4 tem 0 de distância relativamente à junta
+                    anterior.<br><br>
 
-                    Relativamente ao <b>alpha</b> podemos confirmar que apenas a junta 2 tem ângulo em torno da normal comum, do z anterior ao novo z.
+                    Relativamente ao <b>alpha</b> podemos confirmar que apenas a junta 2 tem ângulo em torno da normal
+                    comum, do z anterior ao novo z.
                   </p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
@@ -336,11 +360,14 @@
 
             <div class="col">
               <div class="card shadow-sm">
+                <span class="tipo">IMG</span>
                 <img class="bd-placeholder-img card-img-top" src="./img/cobra600/fotos/fkine_qs.PNG">
 
                 <div class="card-body">
-                  <p class="card-text">Usando a função <em>fkine</em> da pose <b>qs</b> para ir buscar a transformação homogênea que representa a pose.
-                    É a pose do efetor final do robô como uma transformação homogênea SE (3) (4x4) para a configuração conjunta q (1xN).
+                  <p class="card-text">Usando a função <em>fkine</em> da pose <b>qs</b> para ir buscar a transformação
+                    homogênea que representa a pose.
+                    É a pose do efetor final do robô como uma transformação homogênea SE (3) (4x4) para a configuração
+                    conjunta q (1xN).
                   </p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
@@ -354,10 +381,12 @@
                 </div>
               </div><br>
               <div class="card shadow-sm" style="margin-top: -1em;">
+                <span class="tipo">IMG</span>
                 <img class="bd-placeholder-img card-img-top" src="./img/cobra600/fotos/ikine_T.PNG">
 
                 <div class="card-body">
-                  <p class="card-text">A função <em>ikine</em> são as coordenadas conjuntas (1 x N) correspondentes à pose do efetor final do robô T (4x4), que é uma transformação homogênea.<br>
+                  <p class="card-text">A função <em>ikine</em> são as coordenadas conjuntas (1 x N) correspondentes à
+                    pose do efetor final do robô T (4x4), que é uma transformação homogênea.<br>
                     Atenção que estes podem ou não ser iguais aos que foram definidos quando o robô foi criado.<br>
                     Neste caso usamos o <b>T</b> definido em cima como parâmetro desta função.
                   </p>
@@ -451,6 +480,7 @@
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <div class="col">
               <div class="card shadow-sm">
+                <span class="tipo">IMG</span>
                 <img class="bd-placeholder-img card-img-top" src="./img/phantomX/fotos/qz.png">
 
                 <div class="card-body">
@@ -469,7 +499,7 @@
             </div>
             <div class="col">
               <div class="card shadow-sm">
-
+                <span class="tipo">IMG</span>
                 <img class="bd-placeholder-img card-img-top" src="./img/phantomX/fotos/qr.png">
 
                 <div class="card-body">
@@ -488,7 +518,7 @@
             </div>
             <div class="col">
               <div class="card shadow-sm">
-
+                <span class="tipo">IMG</span>
                 <img class="bd-placeholder-img card-img-top" src="./img/phantomX/fotos/qs.png">
 
                 <div class="card-body">
@@ -508,6 +538,7 @@
 
             <div class="col">
               <div class="card shadow-sm">
+                <span class="tipo">IMG</span>
                 <img class="bd-placeholder-img card-img-top" src="./img/phantomX/fotos/qn.png">
 
                 <div class="card-body">
@@ -533,10 +564,12 @@
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <div class="col">
               <div class="card shadow-sm">
+                <span class="tipo">GIF</span>
                 <img class="bd-placeholder-img card-img-top" src="./img/phantomX/gifs/qzToQr.gif">
 
                 <div class="card-body">
-                  <p class="card-text">Animação do qz para o qr, ou seja, animação das juntas da posição [0 0 0 0] para [pi pi/2 -pi/2 0].</p>
+                  <p class="card-text">Animação do qz para o qr, ou seja, animação das juntas da posição [0 0 0 0] para
+                    [pi pi/2 -pi/2 0].</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary"><i onclick="changeLike(this);"
@@ -551,10 +584,12 @@
             </div>
             <div class="col">
               <div class="card shadow-sm">
+                <span class="tipo">GIF</span>
                 <img class="bd-placeholder-img card-img-top" src="./img/phantomX/gifs/qzToQs.gif">
 
                 <div class="card-body">
-                  <p class="card-text">Animação do qz para o qs, ou seja, animação das juntas da posição [0 0 0 0] para [0 0 -pi/2 0].</p>
+                  <p class="card-text">Animação do qz para o qs, ou seja, animação das juntas da posição [0 0 0 0] para
+                    [0 0 -pi/2 0].</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary"><i onclick="changeLike(this);"
@@ -570,10 +605,12 @@
 
             <div class="col">
               <div class="card shadow-sm">
+                <span class="tipo">GIF</span>
                 <img class="bd-placeholder-img card-img-top" src="./img/phantomX/gifs/qzToQn.gif">
 
                 <div class="card-body">
-                  <p class="card-text">Animação do qz para o qn, ou seja, animação das juntas da posição [0 0 0 0] para [pi pi/2 0 pi/4].</p>
+                  <p class="card-text">Animação do qz para o qn, ou seja, animação das juntas da posição [0 0 0 0] para
+                    [pi pi/2 0 pi/4].</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary"><i onclick="changeLike(this);"
@@ -588,10 +625,12 @@
             </div>
             <div class="col">
               <div class="card shadow-sm">
+                <span class="tipo">GIF</span>
                 <img class="bd-placeholder-img card-img-top" src="./img/phantomX/gifs/qsToQr.gif">
 
                 <div class="card-body">
-                  <p class="card-text">Animação do qs para o qr, ou seja, animação das juntas da posição [0 0 -pi/2 0] para [pi pi/2 -pi/2 0].</p>
+                  <p class="card-text">Animação do qs para o qr, ou seja, animação das juntas da posição [0 0 -pi/2 0]
+                    para [pi pi/2 -pi/2 0].</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary"><i onclick="changeLike(this);"
@@ -613,10 +652,12 @@
           <div class="row row-cols-12">
             <div class="col">
               <div class="card shadow-sm">
+                <span class="tipo">GIF</span>
                 <img class="bd-placeholder-img card-img-top" src="./img/phantomX/gifs/GUI.gif">
 
                 <div class="card-body">
-                  <p class="card-text">Usando a função <em>teach</em> para mostrar um GUI, sendo que com este podemos alterar as posições das juntas do robô
+                  <p class="card-text">Usando a função <em>teach</em> para mostrar um GUI, sendo que com este podemos
+                    alterar as posições das juntas do robô
                     da forma que quisermos, começando na posição qz.</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
@@ -642,6 +683,7 @@
           <div class="row row-cols-1 row-cols-sm-2 g-2">
             <div class="col">
               <div class="card shadow-sm">
+                <span class="tipo">IMG</span>
                 <img class="bd-placeholder-img card-img-top" src="./img/phantomX/fotos/ph.png">
 
                 <div class="card-body">
@@ -659,10 +701,12 @@
                     referindo-se a cada uma delas.
                     Como não existem juntas de translação, o <b>d</b> aparece vazio.<br><br>
 
-                    No <b>a</b> existem valores na junta 2, 3 e 4 que são, consequentemente, o raio ao redor do z anterior. Os valores estão negativos pois em vez de se afastarem, aproximam-se.
+                    No <b>a</b> existem valores na junta 2, 3 e 4 que são, consequentemente, o raio ao redor do z
+                    anterior. Os valores estão negativos pois em vez de se afastarem, aproximam-se.
                     Na junta 1 não tem comprimento da normal comum.<br><br>
 
-                    Relativamente ao <b>alpha</b> podemos confirmar que apenas as juntas 1 e 2 têm ângulo em torno da normal comum, do z anterior ao novo z.
+                    Relativamente ao <b>alpha</b> podemos confirmar que apenas as juntas 1 e 2 têm ângulo em torno da
+                    normal comum, do z anterior ao novo z.
                   </p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
@@ -679,11 +723,14 @@
 
             <div class="col">
               <div class="card shadow-sm">
+                <span class="tipo">IMG</span>
                 <img class="bd-placeholder-img card-img-top" src="./img/phantomX/fotos/fkine_qs.PNG">
 
                 <div class="card-body">
-                  <p class="card-text">Usando a função <em>fkine</em> da pose <b>qs</b> para ir buscar a transformação homogênea que representa a pose. 
-                    É a pose do efetor final do robô como uma transformação homogênea SE (3) (4x4) para a configuração conjunta q (1xN).
+                  <p class="card-text">Usando a função <em>fkine</em> da pose <b>qs</b> para ir buscar a transformação
+                    homogênea que representa a pose.
+                    É a pose do efetor final do robô como uma transformação homogênea SE (3) (4x4) para a configuração
+                    conjunta q (1xN).
                   </p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
@@ -697,10 +744,12 @@
                 </div>
               </div><br>
               <div class="card shadow-sm" style="margin-top: -1em;">
+                <span class="tipo">IMG</span>
                 <img class="bd-placeholder-img card-img-top" src="./img/phantomX/fotos/ikine_T.PNG">
 
                 <div class="card-body">
-                  <p class="card-text">A função <em>ikine</em> são as coordenadas conjuntas (1 x N) correspondentes à pose do efetor final do robô T (4x4), que é uma transformação homogênea.<br>
+                  <p class="card-text">A função <em>ikine</em> são as coordenadas conjuntas (1 x N) correspondentes à
+                    pose do efetor final do robô T (4x4), que é uma transformação homogênea.<br>
                     Atenção que estes podem ou não ser iguais aos que foram definidos quando o robô foi criado.<br>
                     Neste caso usamos o <b>T</b> definido em cima como parâmetro desta função.
                   </p>
@@ -793,7 +842,7 @@
   <footer class="text-light bg-dark py-5">
     <div class="container">
       <p class="float-end mb-1">
-        <a href="#" class = "text-light" ><i class="fas fa-arrow-up"></i></a>
+        <a href="#" class="text-light"><i class="fas fa-arrow-up"></i></a>
       </p>
       <p class="mb-1">Feito por: Daniel Ventura, Gonçalo Caldeirinha e Rodrigo Gomes</p>
     </div>
